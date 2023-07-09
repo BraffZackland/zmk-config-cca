@@ -26,10 +26,10 @@
 
 / {
 
-   combos {
-          compatible = "zmk,combos";
-          COMBO(esckey, &kp ESC, 20 21) // j K
-        };
+  //  combos {
+  //         compatible = "zmk,combos";
+  //         COMBO(esckey, &kp ESC, 20 21) // j K
+  //       };
 
     keymap {
       compatible = "zmk,keymap";
@@ -48,46 +48,46 @@
         >;
       };
       
-      lower_layer {
-        // -----------------------------------------------------------------------------------------
-        // | TAB  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-        // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     | DEL  |
-        // | SHFT |BTCLR|     |     |     |     |   | HOME| PGDN| PGUP| END |     | ESC  |
-        //                    | DEL | XXX | SPC |   | ENT | GUI | ALT |
-        bindings = <
-          &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          /**/ &kp N6    &kp N7    &kp N8      &kp N9      &kp N0    &kp BSPC
-          &bt LCTRL   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    /**/ &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT   &trans    &kp DEL
-          &kp LSHFT   &bt BT_CLR    &trans        &trans        &trans        &trans          /**/ &kp HOME  &kp PG_DN &kp PG_UP   &kp END     &trans    &kp ESC
-                                                  &lt NUM DEL   &lt LOW BSPC  &lt RSE SPACE   /**/ &kp RET   &kp LGUI  &kp RALT
-        >;
-      };
+      // lower_layer {
+      //   // -----------------------------------------------------------------------------------------
+      //   // | TAB  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+      //   // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     | DEL  |
+      //   // | SHFT |BTCLR|     |     |     |     |   | HOME| PGDN| PGUP| END |     | ESC  |
+      //   //                    | DEL | XXX | SPC |   | ENT | GUI | ALT |
+      //   bindings = <
+      //     &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          /**/ &kp N6    &kp N7    &kp N8      &kp N9      &kp N0    &kp BSPC
+      //     &bt LCTRL   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    /**/ &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT   &trans    &kp DEL
+      //     &kp LSHFT   &bt BT_CLR    &trans        &trans        &trans        &trans          /**/ &kp HOME  &kp PG_DN &kp PG_UP   &kp END     &trans    &kp ESC
+      //                                             &lt NUM DEL   &lt LOW BSPC  &lt RSE SPACE   /**/ &kp RET   &kp LGUI  &kp RALT
+      //   >;
+      // };
 
-      raise_layer {
-        // -----------------------------------------------------------------------------------------
-        // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-        // | CTRL |  =  |  _  |  -  |  +  | `~  |   |  {  |  }  |  [  |  ]  | \"|"| DEL  |
-        // | SHFT |     |     |     |     |     |   |     | CUT | CPY | PST |     | ESC  |
-        //                    | DEL | BKSP| XXX |   | ENT | GUI | ALT |
-        bindings = <
-          &kp TAB     &kp EXCL      &kp AT        &kp HASH      &kp DLLR        &kp PRCNT      /**/ &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR &kp BSPC
-          &kp LCTRL   &kp EQUAL     &kp UNDER     &kp MINUS     &kp PLUS        &kp GRAVE      /**/ &kp LBRC   &kp RBRC  &kp LBKT   &kp RBKT  &kp BSLH &kp DEL
-          &kp LSHFT   &trans        &trans        &trans        &trans          &trans         /**/ &trans     &kp LC(Z) &kp LC(C)  &kp LC(V) &trans   &kp ESC
-                                                  &lt NUM DEL   &lt LOW BSPC    &lt RSE SPACE  /**/ &kp RET    &kp LGUI  &kp RALT
-        >;
-      };
+      // raise_layer {
+      //   // -----------------------------------------------------------------------------------------
+      //   // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+      //   // | CTRL |  =  |  _  |  -  |  +  | `~  |   |  {  |  }  |  [  |  ]  | \"|"| DEL  |
+      //   // | SHFT |     |     |     |     |     |   |     | CUT | CPY | PST |     | ESC  |
+      //   //                    | DEL | BKSP| XXX |   | ENT | GUI | ALT |
+      //   bindings = <
+      //     &kp TAB     &kp EXCL      &kp AT        &kp HASH      &kp DLLR        &kp PRCNT      /**/ &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR &kp BSPC
+      //     &kp LCTRL   &kp EQUAL     &kp UNDER     &kp MINUS     &kp PLUS        &kp GRAVE      /**/ &kp LBRC   &kp RBRC  &kp LBKT   &kp RBKT  &kp BSLH &kp DEL
+      //     &kp LSHFT   &trans        &trans        &trans        &trans          &trans         /**/ &trans     &kp LC(Z) &kp LC(C)  &kp LC(V) &trans   &kp ESC
+      //                                             &lt NUM DEL   &lt LOW BSPC    &lt RSE SPACE  /**/ &kp RET    &kp LGUI  &kp RALT
+      //   >;
+      // };
 
-      num_layer {
-        // -----------------------------------------------------------------------------------------
-        // | TAB  | F1 | F2 | F3 | F4 | F5 |      |   |  7  |  8  |  9  |  =  |  /  | 
-        // | CTRL | F6 | F7 | F8 | F9 | F10|      |   |  4  |  5  |  6  |  -  |  *  | 
-        // | SHFT | F11| F12|    |    |    |      |   |  1  |  2  |  3  |  +  | ENT |
-        //                  | XXX|BKSP| SPC|      |ENT|  0  |  .  |
-        bindings = <
-          &kp TAB     &kp F1  &kp F2  &kp F3       &kp F4        &kp F5         /**/ &trans    &kp N7  &kp N8  &kp N9 &kp EQUAL  &kp FSLH
-          &kp LCTRL   &kp F6  &kp F7  &kp F8       &kp F9        &kp F10        /**/ &trans    &kp N4  &kp N5  &kp N6 &kp MINUS  &kp ASTRK
-          &kp LSHFT   &kp F11 &kp F12 &trans       &trans        &trans         /**/ &trans    &kp N1  &kp N2  &kp N3 &kp PLUS   &kp RET
-                                      &lt NUM DEL  &lt LOW BSPC  &lt RSE SPACE  /**/ &kp RET   &kp N0  &kp DOT
-        >;
-      };
+      // num_layer {
+      //   // -----------------------------------------------------------------------------------------
+      //   // | TAB  | F1 | F2 | F3 | F4 | F5 |      |   |  7  |  8  |  9  |  =  |  /  | 
+      //   // | CTRL | F6 | F7 | F8 | F9 | F10|      |   |  4  |  5  |  6  |  -  |  *  | 
+      //   // | SHFT | F11| F12|    |    |    |      |   |  1  |  2  |  3  |  +  | ENT |
+      //   //                  | XXX|BKSP| SPC|      |ENT|  0  |  .  |
+      //   bindings = <
+      //     &kp TAB     &kp F1  &kp F2  &kp F3       &kp F4        &kp F5         /**/ &trans    &kp N7  &kp N8  &kp N9 &kp EQUAL  &kp FSLH
+      //     &kp LCTRL   &kp F6  &kp F7  &kp F8       &kp F9        &kp F10        /**/ &trans    &kp N4  &kp N5  &kp N6 &kp MINUS  &kp ASTRK
+      //     &kp LSHFT   &kp F11 &kp F12 &trans       &trans        &trans         /**/ &trans    &kp N1  &kp N2  &kp N3 &kp PLUS   &kp RET
+      //                                 &lt NUM DEL  &lt LOW BSPC  &lt RSE SPACE  /**/ &kp RET   &kp N0  &kp DOT
+      //   >;
+      // };
     };
   };
