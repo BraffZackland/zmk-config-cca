@@ -22,12 +22,15 @@
     layers = <0>; \
   };
 
-  combos {
+ 
+
+/ {
+
+   combos {
           compatible = "zmk,combos";
           COMBO(esckey, &kp ESC, 20 21) // j K
         };
-
-/ {
+        
     keymap {
       compatible = "zmk,keymap";
 
